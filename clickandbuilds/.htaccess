@@ -1,0 +1,4 @@
+<IfModule rewrite_module>
+RewriteEngine On
+RewriteRule ^/?w(/.*)?$ %{DOCUMENT_ROOT}/index.php [L]
+</IfModule>

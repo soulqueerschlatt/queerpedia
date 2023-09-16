@@ -1,0 +1,280 @@
+{
+  "name": "Evelution",
+  "version": "28.1.0",
+  "namemsg": "skinname-evelution",
+  "descriptionmsg": "evelution-skin-desc",
+  "url": "https://www.mediawiki.org/wiki/Skin:Evelution",
+  "author": [
+    "HM100",
+    "Supporters",
+    "Translators",
+    "..."
+  ],
+  "type": "skin",
+  "requires": {
+    "MediaWiki": ">= 1.36.0"
+  },
+  "license-name": "GPL-3.0-or-later",
+  "manifest_version": 2,
+	"AutoloadClasses": {
+		"EvelutionSocialProfile": "SkinEvelution.php",
+		"SkinEvelution": "SkinEvelution.php"
+	},
+	"config": {
+		"EvelutionLeftPersonalLinks": {
+			"value": false,
+			"description": "Moves upper personal links to the left"
+		},
+		"EvelutionDisableColorManagement": {
+			"value": false,
+			"description": "Disables all color-related settings"
+		},
+		"EvelutionForceOneHeader": {
+			"value": false,
+			"description": "On Desktops, disables the static community header and forces the sticky community header to appear at all times"
+		},
+		"EvelutionDisableRightRail": {
+			"value": false,
+			"description": "Disables Evelution's right rail completely"
+		},
+		"EvelutionServerMode": {
+			"value": false,
+			"description": "Switches the layout to be more server-friendly."
+		},
+		"EvelutionCustomFont": {
+			"value": "",
+			"description": "Sets the additional font to be used on Evelution."
+		},
+		"EvelutionStickyRail": {
+			"value":true,
+			"description": "Enables sticky behavior of right rail when needed."
+		},
+		"EvelutionForceFullWidth": {
+			"value":false,
+			"description": "Forces the full width mode of Evelution to all users and breakpoints."
+		},
+		"EvelutionDisableRightRailFromSpecificPages": {
+			"value":[],
+			"description": "Disables Evelution's right rail from specific pages. $wgEvelutionDisableRightRail must be set to false in order for this to have effect."
+		}
+
+	},
+  "ValidSkinNames": {
+    "evelution": {
+      "class": "SkinEvelution",
+	"services": [
+		"LocalServerObjectCache"	
+	],
+      "args": [
+        {
+          "name": "evelution",
+          "responsive": true,
+		  "messages": [
+			"evelution-theme",
+			"evelution-themes",
+			"evelution-explore",
+			"evelution-themes",
+			"evelution-togglesize",
+			"evelution-pages",
+			"evelution-files",
+			"evelution-edits",
+			"evelution-users",
+			"evelution-newfiles",
+			"evelution-toggleaccent",
+			"evelution-colormodes",
+			"evelution-darkmode",
+			"evelution-lightmode",
+			"evelution-variants",
+			"evelution-support",
+			"evelution-documentation",
+			"evelution-standard",
+			"evelution-visual-styles",
+			"evelution-visual-colors",
+			"evelution-color-filters",
+			"evelution-filter-invert",
+			"evelution-filter-night",
+			"evelution-filter-gray",
+			"evelution-filter-darkgray",
+			"evelution-filter-yelblk",
+			"evelution-filter-bluwht",
+			"evelution-style-basic",
+			"evelution-style-contrast",
+			"evelution-style-simple",
+			"evelution-style-classic",         
+			"evelution-color-factorycolors",         
+			"evelution-color-lunacolors",         
+			"evelution-color-classicforced",         
+			"evelution-color-campbellforced",         
+			"evelution-color-forced",         
+			"evelution-color-tangoforced",         
+			"evelution-color-rgbcolors",         
+			"evelution-color-retro",         
+			"evelution-color-fandomcolors",         
+			"evelution-activity-module",
+			"evelution-about-module-info",
+			"evelution-designer-copy",
+			"evelution-designer-title",
+			"evelution-designer-auto",
+			"evelution-discord-module-server-id",
+			"evelution-discord",
+			"moredotdotdot",
+			"show",
+			"hide",
+			"talk",
+			"sitetitle",
+			"searchsuggest-search",
+			"search",
+			"otherlanguages",
+			"tagline",
+			"whatlinkshere",
+			"log",
+			"specialpages",
+			"upload",
+			"personaltools",
+			"pageinfo-toolboxlink",
+			"history",
+			"randompage",
+			"recentchanges",
+			"namespaces",
+			"mediastatistics-header-video",
+			"navigation",
+			"notifications",
+			"tooltip-pt-notifications-alert",
+			"tooltip-pt-notifications-notice",
+			"changecontentmodel",
+			"edit",
+			"aboutsite",
+			"longpages",
+			"unusedtemplates",
+			"apisandbox",
+			"allmessages",
+			"allarticles",
+			"export",
+			"import",
+			"statistics",
+			"recentchangeslinked",
+			"createaccount"
+		   ],
+          "styles": [
+            "skins.evelution.styles",
+            "mediawiki.ui.icon",
+            "mediawiki.ui.button"
+          ],
+          "scripts": [
+            "skins.evelution",
+            "skins.evelution.designer"
+          ]
+        }
+      ]
+    }
+  },
+  "MessagesDirs": {
+    "Evelution": [
+      "i18n"
+    ]
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "Evelution"
+  },
+  "ResourceModules": {
+    "skins.evelution.styles": {
+      "class": "ResourceLoaderSkinModule",
+      "features": {
+        "normalize": true,
+        "elements": true,
+        "content-tables": true,
+        "content-links": true,
+        "content-thumbnails": true,
+        "interface-category": true,
+        "toc": true
+      },
+      "targets": [
+        "desktop",
+        "mobile"
+      ],
+      "styles": [
+        "resources/CPE.css",
+        "resources/Evelution.css",
+        "resources/EvelutionServer.css",
+        "resources/Breakpoints.css",
+        "resources/Headroom.css",
+        "resources/Visual_Styles.css",
+        "resources/OOUI.css",
+        "resources/Icons.css"
+      ]
+    },
+    "skins.evelution": {
+      "targets": [
+        "desktop",
+        "mobile"
+      ],
+      "messages": [
+        "evelution-style-basic",
+        "evelution-style-contrast",
+        "evelution-style-simple",
+        "evelution-color-factorycolors",         
+        "evelution-color-lunacolors",         
+        "evelution-color-classicforced",         
+        "evelution-color-campbellforced",         
+        "evelution-color-forced",         
+        "evelution-color-tangoforced",         
+        "evelution-color-rgbcolors",         
+        "evelution-color-retro",         
+        "evelution-color-fandomcolors",
+        "evelution-color-candycrush",
+        "evelution-color-discord",
+        "viewsource"
+       ],
+      "packageFiles": [
+        "resources/config.js"
+      ]
+    },
+    "skins.evelution.designer": {
+      "targets": [
+        "desktop",
+        "mobile"
+      ],
+      "messages": [
+        "evelution-designer-title",
+        "evelution-designer-copy",
+        "evelution-designer-paste",
+        "evelution-designer-clear",
+        "evelution-designer-test",
+        "evelution-designer-apply",
+        "evelution-designer-body",
+        "evelution-designer-auto",
+        "evelution-designer-other",
+        "evelution-designer-community",
+        "evelution-designer-community-image",
+        "evelution-designer-community-image-opacity",
+        "evelution-designer-community-image-alignment",
+        "evelution-designer-community-image-alignment2",
+        "evelution-designer-community-image-mode",
+        "evelution-designer-community-image-size",
+        "evelution-designer-community-image-tiling",
+        "evelution-designer-community-text-color",
+        "evelution-designer-page",
+        "evelution-designer-page-text",
+        "evelution-designer-page-border",
+        "evelution-designer-accent",
+        "evelution-designer-anchor",
+        "evelution-designer-caret",
+        "evelution-designer-border-radius",
+        "evelution-designer-secondary-font",
+        "evelution-designer-filter",
+        "evelution-designer-filter-hover",
+        "evelution-designer-filter-duration",
+        "evelution-designer-filter-delay",
+        "evelution-designer-notice",
+        "nstab-main",
+		"sitetitle",
+        "pagetitle"
+
+       ],
+      "packageFiles": [
+        "resources/Designer.js"
+      ]
+    }
+  }
+}
